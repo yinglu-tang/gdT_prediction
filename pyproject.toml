@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gdtcr"
+version = "0.1.0"
+description = "Gamma-delta TCR sequence embedding and cluster prediction"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "torch"]
+
+[project.optional-dependencies]
+esmc = [
+    "esm==3.2.1",
+    "scanpy",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "umap-learn",
+    "adjustText",
+]
+probert = [
+    "tape-proteins",
+    "torch-optimizer",
+    "matplotlib",
+    "scipy",
+    "scikit-learn",
+    "umap-learn",
+]
+notebook = ["jupyterlab", "ipykernel"]
+all = ["gdtcr[esmc,probert,notebook]"]
+
+[project.scripts]
+gdtcr = "gdtcr._cli:prediction_main"
+gdtcr-embed = "gdtcr._cli:embedding_main"
+gdtcr-probert = "gdtcr._cli:probert_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["gdtcr*"]
+

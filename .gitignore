@@ -1,0 +1,10 @@
+src/my_package/__pycache__/
+src/my_package.egg-info/
+src/my_package/
+src/gdtcr/__pycache__/
+src/gdtcr.egg-info/
+output/
+tests/
+models/
+scripts/
+scripts/__pycache__/
