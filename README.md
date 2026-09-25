@@ -24,7 +24,7 @@ conda activate gdtcr
 Then, install the package from the project folder containing `pyproject.toml`:
 
 ```bash
-cd /path/to/01_gdTCR/notebook_writing
+cd /path/to/dir
 pip install ".[all]"
 ```
 
