@@ -9,3 +9,5 @@ models/
 scripts/
 scripts/__pycache__/
 build/
+data/trd.csv
+data/trg.csv
